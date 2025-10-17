@@ -66,9 +66,11 @@ let size = 50;
 let clicks = 0;
 
 no_button.addEventListener('click', () => {
+    let question_heading = document.getElementById('question-heading')
     let banner = document.getElementById('banner');
     banner.src = "public/images/party-in-provincetown.gif";
     refreshBanner();
+    question_heading.style.display = "none";    
     // hide buttons div
     let buttons = document.getElementsByClassName('buttons')[0];
     buttons.style.display = "none";
@@ -78,10 +80,12 @@ no_button.addEventListener('click', () => {
 });
 
 yes_button.addEventListener('click', () => {
+    let question_heading = document.getElementById('question-heading')
     // change banner gif path
     let banner = document.getElementById('banner');
     banner.src = "public/images/party-in-provincetown.gif";
     refreshBanner();
+    question_heading.style.display = "none";
     // hide buttons div
     let buttons = document.getElementsByClassName('buttons')[0];
     buttons.style.display = "none";
